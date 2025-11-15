@@ -102,7 +102,7 @@ export default function Index() {
       <header className="border-b bg-white sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold text-primary">Честные Новости</h1>
+            <h1 className="text-3xl font-bold text-green-900">Честные Новости</h1>
             <div className="flex items-center gap-6">
               <nav className="hidden md:flex gap-6">
                 <a href="#news" className="text-muted-foreground hover:text-foreground transition-colors">
