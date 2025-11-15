@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
 const newsData = {
@@ -101,23 +103,31 @@ export default function Index() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold text-primary">Новостной портал</h1>
-            <nav className="hidden md:flex gap-6">
-              <a href="#news" className="text-muted-foreground hover:text-foreground transition-colors">
-                Новости
-              </a>
-              <a href="#weather" className="text-muted-foreground hover:text-foreground transition-colors">
-                Погода
-              </a>
-              <a href="#events" className="text-muted-foreground hover:text-foreground transition-colors">
-                Афиша
-              </a>
-              <a href="#photo" className="text-muted-foreground hover:text-foreground transition-colors">
-                Фото
-              </a>
-              <a href="#video" className="text-muted-foreground hover:text-foreground transition-colors">
-                Видео
-              </a>
-            </nav>
+            <div className="flex items-center gap-6">
+              <nav className="hidden md:flex gap-6">
+                <a href="#news" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Новости
+                </a>
+                <a href="#weather" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Погода
+                </a>
+                <a href="#events" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Афиша
+                </a>
+                <a href="#photo" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Фото
+                </a>
+                <a href="#video" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Видео
+                </a>
+              </nav>
+              <Link to="/login">
+                <Button variant="outline" size="sm">
+                  <Icon name="LogIn" size={16} className="mr-2" />
+                  Вход
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>

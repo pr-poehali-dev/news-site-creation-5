@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "name": "Verify API responds",
+      "method": "GET",
+      "path": "/",
+      "headers": {
+        "X-Auth-Token": "invalid_token"
+      },
+      "expectedStatus": 401,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
